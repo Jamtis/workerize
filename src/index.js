@@ -77,7 +77,7 @@ function setup(ctx, rpcMethods, callbacks) {
 			// invoke worker generator
 			const generator = generators[data.generator_id];
 			(async () => {
-				let {value, done}
+				let value, done;
 				if (generator instanceof AsyncGeneratorFunction) {
 					{value, done} = await generator.next();
 				} else {
